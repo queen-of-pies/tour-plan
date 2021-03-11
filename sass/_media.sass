@@ -1,8 +1,9 @@
 @media   ( max-width:  1200px)
   .container
     max-width: 960px  
-  .slider
-    width: 590px
+  .hotel
+    &-slider
+      width: 590px
   .swiper
     &-slide
       &__image
@@ -37,8 +38,8 @@
       margin-bottom: 30px
     &-right
       flex-direction: row
-  .slider
-    width: 100%   
+    &-slider
+      width: 100%   
   .booking
     width: 340px
   .map
@@ -82,14 +83,13 @@
       &__offer
         order: -1
         margin-left: 0
-  .stars
-    flex-basis: auto
-  .slider
-    height: 350px
-  .hotel
+    &-slider
+      height: 350px
     &-right
       flex-direction: column
       height: 450px
+  .stars
+    flex-basis: auto
   .booking
     width: 100%
   .map
