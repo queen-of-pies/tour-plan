@@ -849,6 +849,7 @@ template {
   position: absolute;
   right: 0;
   height: 100%;
+  max-width: 65px;
   color: #FFFFFF;
   background-color: #EC1F46;
   border: none;
@@ -999,6 +1000,9 @@ template {
   }
   .map {
     width: 100%;
+  }
+  .newsletter {
+    padding-top: 76px;
   }
   .newsletter-wrapper {
     -webkit-box-orient: vertical;

@@ -12,3 +12,7 @@ const swiper = new Swiper(".swiper-container", {
     enabled: true,
   },
 });
+
+// $(".newsletter").parallax({
+//   speed: -2,
+// });
