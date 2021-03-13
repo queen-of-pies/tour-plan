@@ -27,3 +27,4 @@ const reviewsSlider = new Swiper(".reviews-slider", {
     enabled: true,
   },
 });
+$(".newsletter").parallax({ imageSrc: "./img/newsletter-bg.jpeg" });
