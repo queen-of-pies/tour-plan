@@ -1103,6 +1103,7 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  margin-bottom: 94px;
 }
 
 .footer__logo {
@@ -1260,6 +1261,7 @@ template {
   border: none;
   color: #FFFFFF;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .footer__info {
@@ -1268,6 +1270,29 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+}
+
+.footer__buttom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.footer-nav {
+  margin-right: 286px;
+}
+
+.footer-nav__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-right: 15px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 @media (max-width: 1200px) {
