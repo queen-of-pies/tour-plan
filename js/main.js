@@ -27,4 +27,11 @@ const reviewsSlider = new Swiper(".reviews-slider", {
     enabled: true,
   },
 });
+
 $(".newsletter").parallax({ imageSrc: "./img/newsletter-bg.jpeg" });
+
+var menuButton = document.querySelector(".menu-button");
+menuButton.addEventListener("click", function () {
+  console.log("Клик по кнопке мыши");
+  document.querySelector(".nav").classList.toggle("nav--visible");
+});

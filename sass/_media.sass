@@ -90,12 +90,46 @@
     &__buttom
       justify-content: space-between
 @media (max-width: 768px)
+  body
+    padding-top: 65px
   .container
     max-width: 576px
     width: 90%
   .navbar
-    &-menu, &__search, &__user
-      display: none
+    &__mobile
+      &--fixed
+        position: fixed
+        left: 0
+        top: 0
+        right: 0
+        z-index: 99
+    &__search
+      &--mobile
+        &--hidden
+          display: none
+    &__user
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+          flex-direction: column
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &--visible
+          display: flex
+  .nav
+    display: none
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    top: 65px
+    padding-top: 30px
+    &--visible
+      display: block
   .menu
     &-button
       display: flex
