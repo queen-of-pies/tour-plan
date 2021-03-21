@@ -1292,16 +1292,18 @@ template {
 }
 
 .footer__buttom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 .footer-nav {
-  margin-right: 286px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .footer-nav__link {
@@ -1312,6 +1314,11 @@ template {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
+}
+
+.footer__pay {
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .modal__overlay {

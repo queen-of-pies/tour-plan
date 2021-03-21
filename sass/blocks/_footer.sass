@@ -81,10 +81,11 @@
     line-height: 15px
     color: #E0E0E0
   &__buttom
-    display: flex
-    justify-content: end
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
   &-nav
-    margin-right: 286px
+    grid-column: 2 / 3
+    justify-self: center
     &__link
       text-decoration: none
       color: $light
@@ -93,3 +94,5 @@
       font-weight: normal
       font-size: 12px
       line-height: 15px
+  &__pay
+    justify-self: end
