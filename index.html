@@ -11,13 +11,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="navbar navbar__mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a
+            href="#"
+            class="logo"
+            data-aos="fade-right"
+            data-aos-offset="500"
+            data-aos-easing="ease-in-sine"
+          >
             <img
               src="img/horizontal-logo.png"
               alt="Logo:Best Tour Plan"
@@ -280,7 +287,11 @@
     <!-- /.hotel -->
     <section class="newsletter">
       <div class="newsletter-wrapper">
-        <h2 class="newsletter-title">
+        <h2
+          class="newsletter-title"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
@@ -288,6 +299,8 @@
           action="./send.php"
           method="POST"
           class="subscribe newsletter__subscribe form"
+          data-aos="fade-up"
+          data-aos-duration="1000"
         >
           <input
             type="email"
@@ -413,7 +426,12 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card">
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-delay="200"
+          >
             <img
               src="img/card-1.jpg"
               alt="The curious corner of chamarel"
@@ -423,7 +441,12 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-delay="400"
+          >
             <img
               src="img/card-2.jpg"
               alt="Gymkhana club golf course"
@@ -433,7 +456,12 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-delay="600"
+          >
             <img
               src="img/card-3.jpg"
               alt="Tamarind falls hiking trip - full day"
@@ -443,7 +471,12 @@
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card">
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-delay="800"
+          >
             <img
               src="img/card-4.jpg"
               alt="The blue marine discovery questl"
@@ -694,6 +727,7 @@
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
