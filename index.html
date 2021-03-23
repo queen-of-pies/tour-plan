@@ -142,11 +142,11 @@
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
               <div class="stars">
-                <img src="img/star.svg" alt="Star" class="star" />
-                <img src="img/star.svg" alt="Star" class="star" />
-                <img src="img/star.svg" alt="Star" class="star" />
-                <img src="img/star.svg" alt="Star" class="star" />
-                <img src="img/star.svg" alt="Star" class="star" />
+                <img src="img/star.svg" alt="Star" class="stars__star" />
+                <img src="img/star.svg" alt="Star" class="stars__star" />
+                <img src="img/star.svg" alt="Star" class="stars__star" />
+                <img src="img/star.svg" alt="Star" class="stars__star" />
+                <img src="img/star.svg" alt="Star" class="stars__star" />
               </div>
               <!-- /.stars -->
               <h1 class="hotel-name hotel-info__name">GRAND HILTON HOTEL</h1>
@@ -226,14 +226,14 @@
                 </div>
                 <!-- /.price -->
                 <div class="guest">
-                  <div class="guest__amount">
+                  <div class="guest__top">
                     <img
                       src="img/user.svg"
                       alt="User: Icon"
                       class="guest__icon"
                     /><span class="guest__text">2 x Guests</span>
                   </div>
-                  <div class="guest__amount">
+                  <div class="guest__buttom">
                     <img
                       src="img/home.svg"
                       alt="Home: icon"
@@ -287,13 +287,14 @@
         <form
           action="./send.php"
           method="POST"
-          class="subscribe newsletter__subscribe"
+          class="subscribe newsletter__subscribe form"
         >
           <input
-            type="text"
+            type="email"
             class="subscribe__input"
             placeholder="Your email address"
             name="email"
+            required
           />
           <button class="subscribe__button" type="submit">Send</button>
         </form>
@@ -317,10 +318,26 @@
                   <h3 class="reviews-slider__name">Megan Fox</h3>
                   <span class="reviews-slider__data">Stayed 18 Nov, 2019</span>
                   <div class="reviews-slider__rating">
-                    <img src="img/star.svg" alt="Star" class="star" />
-                    <img src="img/star.svg" alt="Star" class="star" />
-                    <img src="img/star.svg" alt="Star" class="star" />
-                    <img src="img/star.svg" alt="Star" class="star" />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="star reviews-slider__star"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="star reviews-slider__star"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="star reviews-slider__star"
+                    />
+                    <img
+                      src="img/star.svg"
+                      alt="Star"
+                      class="star reviews-slider__star"
+                    />
                     <img src="img/star.svg" alt="Star" class="star" />
                   </div>
                 </div>
@@ -582,17 +599,25 @@
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
             <form action="send.php" method="POST" class="form footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name*"
-                name="name"
-              /><input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number*"
-                name="phone"
-              />
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name*"
+                  name="name"
+                  required
+                  minlength="2"
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="tel"
+                  class="input footer__input input__phone"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                />
+              </div>
               <textarea
                 class="message footer__message"
                 placeholder="Message"
@@ -634,13 +659,22 @@
             class="input modal__input"
             placeholder="Your Full Name*"
             name="name"
+            required
+            minlength="2"
           /><input
-            type="text"
-            class="input modal__input"
+            type="tel"
+            class="input modal__input input__phone"
             placeholder="Phone Number*"
             name="phone"
+            required
           />
-          <input type="text" class="input modal__input" placeholder="Email*" />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Email*"
+            name="email"
+            required
+          />
           <textarea
             class="message modal__message"
             placeholder="Message"
@@ -658,6 +692,8 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
