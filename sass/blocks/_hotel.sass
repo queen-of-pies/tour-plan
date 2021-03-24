@@ -9,6 +9,7 @@
     &__name
       margin-top: 0
       margin-bottom: 0
+      letter-spacing: 0.5px
     &__offer
       margin-left: 23px
       margin-top: 4px
@@ -71,7 +72,7 @@
         background-image: url(../img/arrow-next.svg)
       &--prev
         left: 18px
-        background-image: url(../img/arrow-prev.svg)
+        background-image: url(../img/arrow-prev.svg)  
 .stars
   flex-basis: 100%
   &__star
@@ -100,6 +101,7 @@
 .booking
   font-family: Nunito
   width: 350px
+  max-height: 210px
   color: $light
   background-color: $dark
   padding: 29px 29px 26px 26px
@@ -165,3 +167,26 @@
   height: 213px
   border-radius: 10px
   overflow: hidden
+.thankyou
+  display: flex
+  flex-direction: column
+  &__home
+    text-decoration: none
+    color: $light
+    margin-top: 50px
+  &__title
+    font-weight: bold
+    font-size: 24px
+    line-height: 30px  
+  &__button
+    width: 280px
+    background-color: $primary
+    border: none
+    color: $light
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    border-radius: 4px
+    padding-top: 13px
+    padding-bottom: 13px
+    cursor: pointer

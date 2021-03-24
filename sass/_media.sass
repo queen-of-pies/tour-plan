@@ -14,9 +14,18 @@
   .footer
     &__input
       flex-basis: 100%
+    &__buttom
+      grid-template-columns: 50% 50%
     &-nav
-      margin-right: 170px
+      grid-column: 1 / 2
+      justify-self: start
+    &__pay
+      grid-column: 2 / 3
+    &__legal
+      padding-left: 18px
 @media   ( max-width: 992px )
+  button
+    cursor: auto
   .container, .newsletter-wrapper
     max-width: 700px 
   .navbar
@@ -26,8 +35,8 @@
     &__search
       margin-left: auto
     &-menu
-      padding-top: 21px
-      padding-bottom: 22px
+      padding-top: 22px
+      padding-bottom: 23px
       &__link
         font-size: 12px
         line-height: 15px
@@ -37,19 +46,29 @@
     &__input
       width: 340px
   .hotel
+    padding-bottom: 60px
     &-grid
       flex-direction: column
     &__slider
-      margin-bottom: 30px
+      margin-bottom: 26px
     &-right
       flex-direction: row
     &-slider
       width: 100%   
   .booking
     width: 340px
+    padding: 29px 22px 26px 23px
   .map
     width: 340px 
+  .newsletter
+    padding-top: 92px
+    padding-bottom: 93px
   .reviews
+    padding-bottom: 22px
+    &-title
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 50px
     &-slider
       &__item
         max-width: 579px
@@ -62,10 +81,13 @@
     height: 255px
     margin-bottom: 20px
   .footer
+    padding-top: 73px
+    padding-bottom: 33px
     &-wrapper
       grid-template-columns: repeat (6, 1fr )
-      grid-row-gap: 40px
+      grid-row-gap: 50px
     &__logo
+      width: 100px
       grid-row: 1 / 2
       grid-column: span 2
     &__social
@@ -88,8 +110,8 @@
     &__input
       &-group
         flex-basis: 48%
-    &__buttom
-      justify-content: space-between
+    &__legal
+      padding-left: 0
 @media (max-width: 768px)
   body
     padding-top: 65px
@@ -97,7 +119,7 @@
     max-width: 576px
     width: 90%
   .navbar
-    &__mobile
+    &--mobile
       &--fixed
         position: fixed
         left: 0
@@ -167,13 +189,13 @@
       height: 350px
     &-right
       flex-direction: column
-      height: 450px
   .stars
     flex-basis: auto
   .booking
     width: 100%
   .map
     width: 100%
+    margin-top: 20px
   .newsletter
     padding-top: 76px
     &-wrapper
@@ -215,14 +237,64 @@
       width: 100%
       order: 1
       margin-top: 15px
+  .footer
+    &__buttom
+      grid-template-columns: 100%
+      grid-template-rows: 50% 50%
+      grid-gap: 10px
+    &-nav
+      grid-column: 1 / 2
+      grid-row: 1 / 2
+      justify-self: center
+    &__pay
+      grid-column: 1 / 2
+      grid-row: 2 / 3
+      justify-self: start
 @media ( max-width: 576px )
-  .logo
+  .container
+    max-width: 280px
+    width: 90%
+  .navbar
+    &-top
+      padding-top: 28px
+      padding-bottom: 28px
+  .horizontal-logo
     width: 99px
+    height: 13px
   .slider
     height: 250px
   .hotel
+    padding-top: 5px
+    padding-bottom: 40px
     &__slider
+      height: 179px
       margin-bottom: 20px
+    &-info
+      margin-bottom: 18px
+  .map
+    height: 173px
+  .newsletter
+    padding-top: 76px
+    padding-bottom: 83px
+    &-title
+      font-size: 20px
+      line-height: 25px
+      margin-bottom: 37px   
+      &__strong
+        font-size: 30px
+        line-height: 38px
+  .reviews
+    padding-bottom: 0px
+    &-slider
+      &__item
+        padding-bottom: 36px
+    &-title
+      text-align: center
+      width: 245px
+      font-size: 18px
+      line-height: 23px   
+  .activities
+    padding-top: 0
   .footer
     &-wrapper
       grid-template-columns: 1fr
@@ -234,7 +306,11 @@
       grid-row: 1
       grid-column: 1
     &__social
+      &-links
+        margin-top: 22px
       &-network
+        display: flex
+        flex-direction: column
         grid-row: 2
         grid-column: 1
     &__legal
@@ -263,12 +339,9 @@
     &__info
       flex-basis: 100%
       margin-bottom: 15px
-    &__buttom
-      flex-wrap: wrap
     &-nav
-      flex-basis: 100%
-      margin-right: 0
-      align-items: center
+      &__link
+        margin-right: 5px
   .modal
     &__input
       font-style: normal

@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <header class="navbar navbar__mobile--fixed">
+    <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
           <a
-            href="#"
+            href="index.html"
             class="logo"
             data-aos="fade-right"
             data-aos-offset="500"
@@ -39,6 +41,7 @@
               type="text"
               class="search__input"
               placeholder="Search Location"
+              autofocus
             />
             <button class="search__button">
               <img
@@ -269,11 +272,9 @@
             <div class="map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.004632620648!2d79.80141631525208!3d7.574472312153177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2c96110de8289%3A0x3fd7668bc2d85eb9!2sGrand%20Hilton%20Hotel!5e0!3m2!1sru!2sru!4v1615291069282!5m2!1sru!2sru"
-                width="100%"
-                height="213"
-                style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
+                style="border: 0; width: 100%; height: 100%"
               ></iframe>
             </div>
             <!-- /.map -->
@@ -298,7 +299,7 @@
         <form
           action="./send.php"
           method="POST"
-          class="subscribe newsletter__subscribe form"
+          class="subscribe newsletter__subscribe"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
@@ -307,7 +308,6 @@
             class="subscribe__input"
             placeholder="Your email address"
             name="email"
-            required
           />
           <button class="subscribe__button" type="submit">Send</button>
         </form>
@@ -438,7 +438,7 @@
               class="card__image"
             />
             <h3 class="card__title">The curious corner of chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -453,7 +453,7 @@
               class="card__image"
             />
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -468,7 +468,7 @@
               class="card__image"
             />
             <h3 class="card__title">Tamarind falls hiking trip - full day</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
           <div
@@ -483,7 +483,7 @@
               class="card__image"
             />
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -495,11 +495,12 @@
     <section class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="img/vertical-logo.jpg"
-            alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
-          />
+          <a href="index.html" class="logo footer__logo"
+            ><img
+              src="img/vertical-logo.jpg"
+              alt="Logo: Best Tour Plan"
+              class="logo footer__logo"
+          /></a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -610,11 +611,17 @@
                     class="footer__icon"
                   />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00
-                pm)
-                <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div>
+                  Tel (business hours) :
+                  <a class="footer__tel" href="tel:2691500">269 1500</a
+                  ><br />Tel (hotline) Monday - Saturday:
+                  <a class="footer__tel" href="tel:52566138">52-56-61-38</a
+                  >(08:00 am – 20:00 pm)<br />Tel (hotline) Sunday:<a
+                    class="footer__tel"
+                    href="tel:52566138"
+                    >52-56-61-38</a
+                  >(08:00 am – 14:00 pm)
+                </div>
               </li>
               <li class="footer__item footer__item--mb-22">
                 <div class="footer__icon-wrapper">
@@ -624,7 +631,9 @@
                     class="footer__icon"
                   />
                 </div>
-                cherly.lawson@example.com
+                <a class="footer__email" href="mailto:cherly.lawson@example.com"
+                  >cherly.lawson@example.com</a
+                >
               </li>
             </ul>
           </div>
@@ -645,10 +654,11 @@
               <div class="footer__input-group">
                 <input
                   type="tel"
-                  class="input footer__input input__phone"
+                  class="input footer__input input-phone"
                   placeholder="Phone Number*"
                   name="phone"
                   required
+                  minlength="16"
                 />
               </div>
               <textarea
@@ -696,9 +706,10 @@
             minlength="2"
           /><input
             type="tel"
-            class="input modal__input input__phone"
+            class="input modal__input input-phone"
             placeholder="Phone Number*"
             name="phone"
+            minlength="16"
             required
           />
           <input
@@ -722,7 +733,6 @@
     </div>
     <!-- /.modal -->
     <script src="js/jquery-3.6.0.min.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>

@@ -6,8 +6,9 @@
     justify-content: space-between
     padding-top: 40px
     padding-bottom: 40px
-    &__menu-button
-      display: none
+    &__menu
+      &-button
+        display: none
   &__search
     margin-right: auto
     margin-left: 108px
@@ -25,6 +26,7 @@
     &__link
       text-decoration: none
       color: inherit
+      font-weight: bold
       font-size: 14px
       line-height: 18px
       text-transform: uppercase
@@ -48,6 +50,7 @@
     font-size: 12px
     line-height: 15px
     color: $text-color
+    outline: none
   &__button
     position: absolute
     right: 0
@@ -56,6 +59,7 @@
     padding: 12px 25px
     border: none
     background-color: $primary
+    cursor: pointer
 .user
   display: flex
   align-items: center
