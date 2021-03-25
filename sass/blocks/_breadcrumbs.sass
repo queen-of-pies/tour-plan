@@ -1,16 +1,21 @@
 .breadcrumbs
-  padding: 19px 0
+  height: 50px
+  display: flex
+  align-items: center
+  letter-spacing: -0.1px
+  padding: 0 calc(50% - 555px)
   &__list
     display: flex
     list-style: none
-    margin: 0
+    margin-left: 0
+    margin-right: auto
     padding: 0
   &__item
     margin-right: 4px
     font-size: 10px
     line-height: 13px
   &__item:not(:last-child)::after
-    content: '/'    
+    content: ' / '    
   &__link
     text-decoration: none
     color: inherit
