@@ -3,6 +3,8 @@ $(document).ready(function () {
     // Optional parameters
     loop: true,
 
+    autoplay: true,
+
     // Navigation arrows
     navigation: {
       nextEl: ".hotel-slider__button--next",
@@ -22,10 +24,6 @@ $(document).ready(function () {
     navigation: {
       nextEl: ".reviews-slider__button--next",
       prevEl: ".reviews-slider__button--prev",
-    },
-
-    keyboard: {
-      enabled: true,
     },
   });
 

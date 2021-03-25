@@ -11,7 +11,7 @@
       margin-bottom: 0
       letter-spacing: 0.5px
     &__offer
-      margin-left: 23px
+      margin-left: 14px
       margin-top: 4px
     &__discription
       margin: 0
@@ -67,6 +67,7 @@
       background-position: center
       background-size: 10px
       background-color: transparent
+      outline: none
       &--next
         right: 18px
         background-image: url(../img/arrow-next.svg)
@@ -76,8 +77,8 @@
 .stars
   flex-basis: 100%
   &__star
-    width: 8px
-    height: 8px
+    width: 7px
+    height: 7px
 .offer
   font-size: 10px
   line-height: 13px
@@ -93,9 +94,11 @@
   background-color: $primary
   color: $light
   &__text
+    font-weight: 600
     font-size: 8px
     line-height: 10px
   &__counter
+    font-weight: bold
     font-size: 14px
     line-height: 18px
 .booking
@@ -110,7 +113,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    margin-bottom: 9px
+    margin-bottom: 5px
   &-phone
     display: flex
     justify-content: space-between
@@ -118,7 +121,7 @@
     &__text
       font-weight: 600
       font-size: 18px
-      line-height: 25px
+      line-height: 28px
     &__number
       text-decoration: none
       color: inherit
@@ -126,7 +129,7 @@
       font-weight: 600
       font-size: 18px
       line-height: 25px
-      margin-left: 8px
+      margin-left: 5px
   &__button
     width: 100%
     background-color: $primary
@@ -149,19 +152,22 @@
   &__pricetag
     font-weight: 800
     font-size: 24px
-    line-height: 33px
+    line-height: 30px
   &__per-room
     font-weight: normal
     font-size: 12px
-    line-height: 16px
+    line-height: 17px
 .guest
   &__top
-    margin-bottom: 9px
+    margin-bottom: 1px
   &__text
     font-weight: normal
     font-size: 12px
-    line-height: 16px
+    line-height: 25px
     margin-left: 9px
+    &--buttom
+      margin-left: 15px
+      // line-height: 12px
 .map
   width: 347px
   height: 213px
