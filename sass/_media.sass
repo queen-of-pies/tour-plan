@@ -34,11 +34,9 @@
     &__search
       margin-right: 73px
       margin-left: auto
-    .nav
-      height: 60px
     &-menu
       justify-content: space-around
-      height: 60px
+
       &__link
         font-size: 12px
         line-height: 15px
@@ -131,6 +129,7 @@
         right: 0
         z-index: 99
     &__search
+      margin: 0
       &--mobile
         &--hidden
           display: none
@@ -153,8 +152,10 @@
     left: 0
     right: 0
     bottom: 0
-    top: 65px
+    top: 100px
     padding-top: 30px
+    background-color: $dark
+    overflow: auto
     &--visible
       display: block
   .menu
@@ -239,7 +240,8 @@
       padding: 20px 50px  
     &__button
       width: 100%
-      order: 1
+      margin-top: 15px
+    &__info
       margin-top: 15px
   .footer
     &__buttom
@@ -261,6 +263,8 @@
   .navbar
     &-top
       height: 70px
+  .nav
+    top: 70px
   .horizontal-logo
     width: 99px
     height: 13px

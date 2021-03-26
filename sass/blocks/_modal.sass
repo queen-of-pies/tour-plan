@@ -27,11 +27,13 @@
     visibility: hidden
     opacity: 0
     transition: opacity 0.5s
+    overflow: auto
     &--visible
       visibility: visible
       opacity: 1
-      overflow: hidden
-      position: fixed
+    form
+      height: 80vh
+      overflow-y: auto
   &__close
     position: absolute
     top: 17px
