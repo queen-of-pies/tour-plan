@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
   </head>
@@ -22,16 +22,11 @@
         <div class="navbar-top">
           <a
             href="index.html"
-            class="logo"
+            class="logo top-logo"
             data-aos="fade-right"
             data-aos-offset="500"
             data-aos-easing="ease-in-sine"
-          >
-            <img
-              src="img/horizontal-logo.png"
-              alt="Logo:Best Tour Plan"
-              class="horizontal-logo"
-            />
+            >best <span>tour</span> plan
           </a>
           <form
             action="#"
@@ -132,17 +127,18 @@
     </header>
     <!-- /.header  -->
     <nav class="breadcrumbs">
-      <div class="container">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Home</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a href="#" class="breadcrumbs__link">Flash Offers</a>
-          </li>
-          <li class="breadcrumbs__item">Grand Hilton Hotel</li>
-        </ul>
-      </div>
+      <!-- <div class="container"> -->
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Home</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="#" class="breadcrumbs__link">Flash Offers</a>
+        </li>
+        <li class="breadcrumbs__item">Grand Hilton Hotel</li>
+      </ul>
+      <!-- <div>.</div> -->
+      <!-- </div> -->
       <!-- /.container -->
     </nav>
     <!-- /.breadcrumbs -->
@@ -302,7 +298,7 @@
           </h2>
         </div>
         <form
-          action="./send.php"
+          action="send.php"
           method="POST"
           class="subscribe newsletter__subscribe"
           data-aos="fade-up"
@@ -313,8 +309,17 @@
             class="subscribe__input"
             placeholder="Your email address"
             name="email"
+            id="newsletterInput"
+            oninput="handleInput(event)"
           />
-          <button class="subscribe__button" type="submit">Send</button>
+          <button
+            class="subscribe__button"
+            type="submit"
+            disabled
+            onclick="handleClickNewsLetter(event)"
+          >
+            Send
+          </button>
         </form>
       </div>
       <!-- /.newsletter-wrapper -->
@@ -571,13 +576,25 @@
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
-              <a href="#" class="footer__social-link">
+              <a
+                href="https://fb.com"
+                class="footer__social-link"
+                target="blank"
+              >
                 <img src="img/fb.svg" alt="Icon: Facebook" />
               </a>
-              <a href="#" class="footer__social-link">
+              <a
+                href="https://youtube.com"
+                class="footer__social-link"
+                target="blank"
+              >
                 <img src="img/yt.svg" alt="Icon: YouTube" />
               </a>
-              <a href="#" class="footer__social-link">
+              <a
+                href="https://instagram.com"
+                class="footer__social-link"
+                target="blank"
+              >
                 <img src="img/inst.svg" alt="Icon: Instagram" />
               </a>
             </div>
@@ -677,8 +694,12 @@
                 placeholder="Message"
                 name="message"
               ></textarea>
-              <button class="button footer__button" type="submit">Send</button>
-              <span class="footer__info">* Required Fields</span>
+              <div class="form__footer">
+                <button class="button footer__button" type="submit">
+                  Send
+                </button>
+                <span class="footer__info">* Required Fields</span>
+              </div>
             </form>
             <!-- /.footer__form -->
           </div>
@@ -715,7 +736,8 @@
             name="name"
             required
             minlength="2"
-          /><input
+          />
+          <input
             type="tel"
             class="input modal__input input-phone"
             placeholder="Phone Number*"
@@ -735,8 +757,10 @@
             placeholder="Message"
             name="message"
           ></textarea>
-          <button class="button modal__button" type="submit">Send</button>
-          <span class="modal__info">* Required Fields</span>
+          <div class="form__footer modal__footer">
+            <button class="button modal__button" type="submit">Send</button>
+            <span class="modal__info">* Required Fields</span>
+          </div>
         </form>
         <!-- /.modal__form -->
       </div>

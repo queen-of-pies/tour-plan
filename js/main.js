@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  document.querySelector(".subscribe__button").style.cursor = "not-allowed";
   const hotelSlider = new Swiper(".hotel-slider", {
     // Optional parameters
     loop: true,
@@ -48,18 +49,21 @@ $(document).ready(function () {
   function openModal() {
     modalOverlay.addClass("modal__overlay--visible");
     modalDialog.addClass("modal__dialog--visible");
+    $("body").css("overflow", "hidden");
   }
 
   function closeModal(event) {
     event.preventDefault();
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
+    $("body").css("overflow", "auto");
   }
 
   function keyCloseModal(e) {
     if (e.keyCode === 27) {
       modalOverlay.removeClass("modal__overlay--visible");
       modalDialog.removeClass("modal__dialog--visible");
+      $("body").css("overflow", "auto");
     }
   }
 
@@ -86,3 +90,21 @@ $(document).ready(function () {
 
   AOS.init();
 });
+
+function handleClickNewsLetter(e) {
+  var input = document.querySelector("#newsletterInput");
+  if (input.value.length < 5) {
+    e.preventDefault();
+  }
+}
+
+function handleInput(e) {
+  let btn = document.querySelector(".subscribe__button");
+  if (e.target.value.length > 4) {
+    btn.disabled = false;
+    btn.style.cursor = "pointer";
+  } else {
+    btn.disabled = true;
+    btn.style.cursor = "not-allowed";
+  }
+}

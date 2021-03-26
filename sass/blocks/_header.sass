@@ -4,8 +4,7 @@
     display: flex
     align-items: center
     justify-content: space-between
-    padding-top: 40px
-    padding-bottom: 40px
+    height: 120px
     &__menu
       &-button
         display: none
@@ -20,7 +19,7 @@
     list-style: none
     color: $light
     margin: 0
-    padding: 31px 0
+    height: 80px
     &__item
       &--visible
         display: none
@@ -33,6 +32,14 @@
       text-transform: uppercase
 .logo
   width: 177px
+.top-logo
+  font-family: 'Luckiest Guy', cursive
+  font-size: calc(24px - (1440px - 100vw) / ((1440 - 768) / (24 - 18)));
+  color: #333333
+  text-decoration: none
+  margin-top: 8px
+  span
+    color: $primary
 .nav
   background-color: $dark
 .search
