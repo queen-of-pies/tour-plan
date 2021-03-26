@@ -200,7 +200,7 @@
     padding-top: 197px
     &--visible
       display: block
-      height: 90%
+      height: 80%
       overflow: scroll
   .menu
     &-button
@@ -271,15 +271,23 @@
   .activities
     padding-top: 40px
     padding-bottom: 60px
+    &-wrapper
+      // justify-content: center   
     &__title
       font-size: 18px
       line-height: 23px
       margin-bottom: 36px
+  .card
+    width: 255px
   .modal
     &__dialog
       padding: 20px 50px 
       min-width: 350px     
   .footer
+    &-wrapper
+      grid-column-gap: 7px
+    &__title
+      font-size: 14px
     &__buttom
       grid-template-columns: 100%
       grid-template-rows: 50% 50%
@@ -333,6 +341,7 @@
     padding-bottom: 88px
     padding-top: 44px
     &-slider
+      margin-top: 43px
       &__item
         padding-bottom: 36px
       &__button
@@ -343,13 +352,14 @@
           margin-right: -90px
       &__text
         height: 266px
+        text-align: start
     &-title
       text-align: center
       width: 267px
       font-size: 18px
       line-height: 23px 
       letter-spacing: 0.6px 
-      margin-bottom: 43px
+      margin: auto
   .activities
     padding-top: 0
     padding-bottom: 48px
@@ -361,6 +371,7 @@
       grid-row-gap: 31px
       margin-bottom: 25px
     &__title
+      font-size: 18px
       &--mb-3
         margin-bottom: 15px
     &__logo
@@ -417,6 +428,8 @@
         margin-right: 5px
     &__buttom
       grid-gap: 0
+    &__pay
+      padding-top: 7px
   .form
     &__footer
       flex-wrap: wrap
@@ -429,6 +442,7 @@
     &__button
       width: 100%
     &__dialog
+      min-width: 300px
       &--visible
         height: 70vh
         overflow: scroll

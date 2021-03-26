@@ -34,6 +34,7 @@ $(document).ready(function () {
   menuButton.addEventListener("click", function () {
     console.log("Клик по кнопке мыши");
     document.querySelector(".nav").classList.toggle("nav--visible");
+    document.querySelector("body").classList.toggle("preventScroll");
   });
 
   var modalButton = $("[data-toggle=modal]");
@@ -81,6 +82,7 @@ $(document).ready(function () {
         },
         phone: {
           required: "Please specify your phone",
+          minlength: "The name must be no shorter than 10 characters",
         },
       },
     });
