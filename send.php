@@ -10,15 +10,18 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 $email = $_POST['email'];
 
-if (isset($email))  {
+if (isset($phone) and ($email))  {
     // Формирование самого письма
-    $title = "Новая подписка Best Tour Plan";
+    $title = "Новое обращение Best Tour Plan";
     $body = "
-    <h2>Новая подписка</h2>
-    <b>Email:</b> $email<br>";
-// }elseif(iset($name)&&isset($phone)){
-}else{
-    // Формирование самого письма
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Контактный телефон:</b> $phone<br><br>
+    <b>Email:</b> $email<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+    
+}elseif(isset($phone)){
     $title = "Новое обращение Best Tour Plan";
     $body = "
     <h2>Новое обращение</h2>
@@ -26,6 +29,12 @@ if (isset($email))  {
     <b>Контактный телефон:</b> $phone<br><br>
     <b>Сообщение:</b><br>$message
     ";
+}else{
+    // Формирование самого письма
+    $title = "Новая подписка Best Tour Plan";
+    $body = "
+    <h2>Новая подписка</h2>
+    <b>Email:</b> $email<br>";
 }
 
 
