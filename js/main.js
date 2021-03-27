@@ -32,7 +32,6 @@ $(document).ready(function () {
 
   var menuButton = document.querySelector(".menu-button");
   menuButton.addEventListener("click", function () {
-    console.log("Клик по кнопке мыши");
     document.querySelector(".nav").classList.toggle("nav--visible");
     document.querySelector("body").classList.toggle("preventScroll");
   });

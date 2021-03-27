@@ -300,6 +300,8 @@
       grid-column: 1 / 2
       grid-row: 2 / 3
       justify-self: start
+  .invalid
+    font-size: 11px
 @media ( max-width: 576px )
   .container
     max-width: 520px
@@ -453,6 +455,6 @@
     &-top
       height: 70px
 @media (min-width: 992px)
-  button:hover, a:hover
+  button:hover, .hover:hover
     background-color: lighten($primary, 15%)
     transition: background-color .5s ease-in-out
